@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const noteRoutes = require("./routes/noteRoutes");
-const dns= require("dns")
-dns.setServers(["8.8.8.8","8.8.4.4"])
+// const dns= require("dns")
+// dns.setServers(["8.8.8.8","8.8.4.4"])
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use("/", noteRoutes);
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect("mongodb+srv://vaishu:vaishu267@cluster0.4nezba1.mongodb.net/nostesaver")
 .then(() => {
     console.log("MongoDB Connected Successfully");
 })
