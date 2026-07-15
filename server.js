@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/notes", noteRoutes);
+app.use("/", noteRoutes);
 
 mongoose.connect("mongodb+srv://manikanta24_db_user:Ganesh4260@cluster1.smhpvoy.mongodb.net/ganesh")
 .then(() => {
